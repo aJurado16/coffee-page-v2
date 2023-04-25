@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.7em;}
+h3 {font-size: 2em;}
+p {font-size: 1em;}
+
+.container {
+    max-width: 992px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+header {
+    background-color: #A4AF4C;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+
+header .logoHeader{
+    margin: 0 20px;
+    padding: 1px;
+    width: 50px;
+}
+
+
+header .nav {
+    display: flex;
+    max-width: 992px;
+    margin: 0 auto;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #7c8538;
+    position: fixed;
+    left: 100%;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    list-style: none;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    transition: left 0.3s;
+}
+
+.nav-menu-link {
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    align-items: center;
+    color: aliceblue;
+}
+
+.nav-menu-link:hover {
+    background: none;
+    color: #A4AF4C;
+    transition: 0.4s;
+}
+
+.nav-menu-item {
+    margin: 10px 0;
+}
+
+.nav-toggle{
+    display: block;
+    color: aliceblue;
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 80px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.nav-menu_visible {
+    left: 0;
+    transition: left 0.3s;
+
+
+}
+
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("../media/foto-bebidas.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#Trending .container {
+    margin-top: 10px;
+}
+
+.img_box img {
+    border-radius: 5%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.splide__arrow {
+    background-color: #7c8538 !important;
+}
+
+.splide__pagination{
+    bottom: -2rem !important;
+}
+
+.splide__pagination__page.is-active{
+    opacity: 1 !important;
+    background-color: #7c8538 !important;
+}
+
+#menu .container{
+    margin-top: 60px;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#menu .container img {
+    width: 40%;
+    height: auto;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #A4AF4C;
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 1em;
+    
+}
+
+footer .footer-first {
+    display: flex;
+    align-items: center;
+    
+}
+
+footer img  {
+    width: 25px;
+    height: 25px;
+    margin: 0 1px;
+}
+
+footer i {
+    font-size: 25px;
+    color: black;
+    margin: 3px;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgb(0,0,0,.35);
+    transition: 0.3s ease;
+}
+
+.fa-facebook:hover{
+    background-color: rgba(0, 0, 255, 0.7);
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5),
+                0 0 10px rgba(0, 0, 255, 0.5),
+                0 0 15px rgba(0, 0, 255, 0.5),
+                0 0 20px rgba(0, 0, 255, 0.5);
+}
+
+.fa-instagram:hover{
+    background-color: rgba(225, 48, 108, 0.7);
+    color: white;
+    box-shadow:     0 0 5px rgba(225, 48, 108, 0.5),
+                    0 0 15px rgba(225, 48, 108, 0.5),
+                    0 0 25px rgba(225, 48, 108, 0.5),
+                    0 0 40px rgba(225, 48, 108, 0.5);
+}
+
+
+@media screen and (min-width: 769px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        background-color: transparent;
+        position: static;
+        width: auto;
+        padding: 0;
+        list-style: none;
+        height: auto;
+        overflow-y: hidden;
+        transition: none;
+    }
+
+    .nav-menu-item {
+        margin: 0 10px ;
+        line-height: 80px;
+        width: max-content;
+    }
+
+    .nav-toggle{
+        display: none;
+        color: aliceblue;
+        background: none;
+        border: none;
+        font-size: 28px;
+        line-height: 80px;
+        margin: 0 20px;
+        cursor: pointer;
+    }
+
+    .nav-menu-link {
+        text-decoration: none;
+        padding: 10px 14px;
+        border-radius: 8px;
+        align-items: center;
+        color: aliceblue;
+    }
+    
+    .nav-menu-link:hover {
+        background-color: #7c8538;
+        color: aliceblue;
+        transition: 0.4s;
+    }
+
+
+  }
